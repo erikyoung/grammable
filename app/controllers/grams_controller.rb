@@ -5,6 +5,13 @@ before_action :authenticate_user!, only: [:new, :create]
     @gram = Gram.new
   end
 
+  def show
+    @gram = Gram.find_by_id(params[:id])
+    if @gram.blank?
+      render text: 'Not Found :(', status: :not_found
+    end
+  end
+
   def index
   end
 
