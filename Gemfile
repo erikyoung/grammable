@@ -3,6 +3,7 @@ gem 'simple_form'
 gem 'devise', '~> 4.1.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails'
+gem 'carrierwave', '~> 1.0'
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
