@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
   background-color: #fafafa;
   font-family: 'Josefin Sans', sans-serif;
@@ -31,10 +34,7 @@ body {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   border: 1px solid #e8e8e8;
   margin-top: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-right: 50px; /* Half the height */
-  margin-left: 60px; /* Half the width */
+  padding: 0px;
 
    
 }

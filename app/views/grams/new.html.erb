@@ -5,7 +5,6 @@
 
   <%= simple_form_for @gram, :html => {:multipart => true} do |f| %>
     <%= f.input :message %>
-    <%= f.submit "Post!" %>
     <%= f.input :picture %>
     <%= f.submit "Post!", class: 'my-btn' %>
   <% end %>
