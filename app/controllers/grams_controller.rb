@@ -1,5 +1,5 @@
 class GramsController < ApplicationController
-before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :upvote]
 
   def destroy
     @gram = Gram.find_by_id(params[:id])
@@ -22,6 +22,12 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
 
   def index
     @grams = Gram.all
+  end
+
+  def upvote
+    @gram = Gram.find_by_id(params[:id])
+    @gram.liked_by current_user
+    redirect_to @gram
   end
 
   def create

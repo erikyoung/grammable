@@ -4,5 +4,6 @@ class Gram < ActiveRecord::Base
   has_many :comments
   belongs_to :user
   mount_uploader :picture, PictureUploader
+  acts_as_votable
 end
 

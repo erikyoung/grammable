@@ -3,6 +3,7 @@ gem 'simple_form'
 gem 'devise', '~> 4.1.1'
 gem "figaro"
 gem "fog"
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails'
 gem 'carrierwave', '~> 1.0'

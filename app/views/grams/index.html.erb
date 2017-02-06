@@ -10,6 +10,15 @@
       <% if current_user && current_user == gram.user %>
         <%= link_to 'Edit', edit_gram_path(gram) %>
         <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} %>
+
+  <div class="like-actions pull-right">
+        <%= link_to gram_like_path(gram), method: :put, class: "btn btn-default" do %> 
+        <span class="likebtn-wrapper" data-identifier="item_1"></span>
+
+        <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script> 
+      <% end %>
+  </div>
+
       <% end %>
     </div>
     <br class="clear-fix" />
