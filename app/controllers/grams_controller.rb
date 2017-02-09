@@ -22,6 +22,7 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
 
   def index
     @grams = Gram.all
+    @grams = Gram.paginate(:page => params[:page], per_page: 3)
   end
 
   def upvote

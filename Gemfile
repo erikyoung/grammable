@@ -3,6 +3,8 @@ gem 'simple_form'
 gem 'devise', '~> 4.1.1'
 gem "figaro"
 gem "fog"
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap', '~> 1.0'
 gem 'social-share-button'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.3.6'

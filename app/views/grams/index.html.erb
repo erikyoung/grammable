@@ -10,7 +10,7 @@
       <% if current_user && current_user == gram.user %>
         <%= link_to 'Edit', edit_gram_path(gram) %>
         <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} %>
-    
+
   
   <div class="liking-button pull-left">
     <script>(function(d, s, id) {
@@ -49,4 +49,9 @@
     </div>
 </div>
   <% end %>
+</div>
+
+
+<div class="pagination col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <p><%= will_paginate @grams, previous_label: "Older", next_label: "Newer", renderer: BootstrapPagination::Rails %></p>
 </div>
