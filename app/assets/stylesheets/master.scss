@@ -93,6 +93,7 @@ input {
 .gram-actions a {
   font-weight: bold;
   font-size: 16px;
+  margin-right: 50px;
   
 }
 
@@ -111,9 +112,14 @@ input {
   font-size: 18px;
 }
 
-.social-share-button {
+.social-share {
   background-repeat: no-repeat;
   }
+
+.liking-button {
+  margin-left: 10px;
+  
+}
 
 .registrations {
   display: inline-block;
