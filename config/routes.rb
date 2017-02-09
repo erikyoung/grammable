@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root 'grams#index'
   resources :grams do
     put "like", to: 'gram#upvote'
-    resources :comments, only: :create
+    resources :comments, only: [:create, :show]
+  
   end
   
   
