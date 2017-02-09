@@ -25,7 +25,6 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
     @grams = Gram.paginate(:page => params[:page], per_page: 3)
   end
 
-  
 
   def create
     @gram = current_user.grams.create(gram_params)
