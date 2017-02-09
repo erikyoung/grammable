@@ -25,11 +25,7 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
     @grams = Gram.paginate(:page => params[:page], per_page: 3)
   end
 
-  def upvote
-    @gram = Gram.find_by_id(params[:id])
-    @gram.liked_by current_user
-    redirect_to @gram
-  end
+  
 
   def create
     @gram = current_user.grams.create(gram_params)
