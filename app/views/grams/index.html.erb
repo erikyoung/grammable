@@ -10,13 +10,23 @@
       <% if current_user && current_user == gram.user %>
         <%= link_to 'Edit', edit_gram_path(gram) %>
         <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} %>
+  
 
   <div class="social-share-button pull-right">
-        
+    <%= social_share_button_tag("My Site") %>
 
-        <%= social_share_button_tag("My Site") %>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script> 
       
   </div>
+    <div class="fb-like" data-href="https://grammable-erik.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"> 
+    </div>
 
       <% end %>
     </div>
