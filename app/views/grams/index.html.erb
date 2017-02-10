@@ -11,8 +11,10 @@
         <%= link_to 'Edit', edit_gram_path(gram) %>
         <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} %>
 
+      <% end %>
+    </div>
+    <div class="liking-button pull-left">
   
-  <div class="liking-button pull-left">
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
@@ -25,9 +27,6 @@
     <div class="fb-like" data-href="https://grammable-erik.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"> 
     </div>
   </div>
-
-      <% end %>
-    </div>
     <br class="clear-fix" />
      <div class="comments">
       <h3>Comments</h3>
