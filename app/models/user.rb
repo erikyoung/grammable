@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :grams
   has_many :comments
+  has_many :uploads
   
 end
