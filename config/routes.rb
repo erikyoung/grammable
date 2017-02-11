@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root 'grams#index'
   resources :grams do
     resources :comments, only: [:create, :show]
-    resources :docs, only: [:index, :new, :create, :destroy]
+  resources :docs, only: [:index, :new, :create, :destroy]
   end
   
   
