@@ -1,4 +1,8 @@
 FactoryGirl.define do
+  factory :doc do
+    name "MyString"
+    attachment "MyString"
+  end
   factory :comment do
     
   end

@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
+  
+
+  #get 'docs/index'
+
+  #get 'docs/new'
+
+  #get 'docs/create'
+
+  #get 'docs/destroy'
+
   devise_for :users
   root 'grams#index'
   resources :grams do
     resources :comments, only: [:create, :show]
-
+    resources :docs, only: [:index, :new, :create, :destroy]
   end
   
   
